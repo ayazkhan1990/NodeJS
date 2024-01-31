@@ -7,4 +7,4 @@ console.log(os.freemem());
 // check home directory
 console.log(os.homedir());
 console.log(os.machine());
-console.log(os.networkInterfaces());
+// console.log(os.networkInterfaces());
