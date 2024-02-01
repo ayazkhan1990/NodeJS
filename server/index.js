@@ -10,12 +10,11 @@ const server=http.createServer((req, res)=>{
         res.end("Hi this is my first Server");
     }
     else if(req.url=='/about'){
-        res.end(objdata[1].phone);
+        res.end(objdata[0].name);
     }
     else{
         res.end("404: Page could not be found");
     }
-
  
 })
 
