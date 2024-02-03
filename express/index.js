@@ -32,5 +32,5 @@ app.use(router);
 
 
 app.listen(3000, ()=>{
-    console.log("Server Start")
+    console.log("Server Start 3000")
 })
