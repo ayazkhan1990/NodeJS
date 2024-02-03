@@ -1,6 +1,9 @@
 const express= require("express");
 const path=require("path")
 const app=express()
+const router=require("./router")
+
+
 
 // const pathdir=path.join(__dirname,'public')  
 // app.use(express.static(pathdir));
@@ -24,13 +27,9 @@ const app=express()
 // =================== 2nd way
 
 app.set("view engine", "ejs");
+app.use(router);
 
-app.get("/", (req, res)=>{
-    res.render("index", {title:"index"})
-})
-app.get("/home", (req, res)=>{
-    res.render("home", {title:"home"})
-})
+
 
 app.listen(3000, ()=>{
     console.log("Server Start")
