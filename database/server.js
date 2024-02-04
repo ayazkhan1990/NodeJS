@@ -63,6 +63,16 @@ app.delete("/delete/:id", async(req, res)=>{
     
    }
 })
+//=============Login data By ID==========
+app.post("/login", async(req, res)=>{
+    try {
+        const useremail=req.body.email;
+    const getemail= await user.findOne({email:useremail});
+    res.send(getemail)
+    } catch (error) {
+        res.status(404).send(error);
+    }
+})
 
 
 app.listen('4000', ()=>{
