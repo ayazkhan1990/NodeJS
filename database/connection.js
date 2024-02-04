@@ -5,8 +5,9 @@ mongoose.connect('mongodb://localhost:27017/nodejsstudy').then(()=>{
 console.log(e);
 })
 
+//======== Schema============
 const schema=new mongoose.Schema({
     name:String
 })
-const user =mongoose.model("user",schema)
+const user = mongoose.model("user",schema)
 module.exports=user;
